@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff8f0;
+  color: #222;
+}
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 0 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.icon-main {
+  margin-bottom: 0.5rem;
+}
+h1 {
+  font-size: 2rem;
+  color: #C9A14A;
+  margin: 0.2em 0 0.1em 0;
+}
+.subtitle {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+}
+.btn {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+.btn-gold {
+  background: linear-gradient(90deg, #C9A14A 60%, #fff8f0 100%);
+  color: #222;
+}
+.btn-gold:hover {
+  background: #bfa14a;
+  color: #fff;
+}
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+.btn-whatsapp:hover {
+  background: #128C7E;
+}
+.guide {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(201,161,74,0.08);
+  padding: 1em;
+  margin: 1.5em 0;
+}
+.guide h2 {
+  color: #C9A14A;
+  font-size: 1.1em;
+  margin-bottom: 0.7em;
+}
+.guide ol {
+  padding-left: 1.2em;
+  margin: 0;
+}
+.guide li {
+  margin-bottom: 0.7em;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+}
+.icon-step {
+  color: #C9A14A;
+  font-size: 1.3em;
+  margin-right: 0.5em;
+}
+footer {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.95em;
+  margin: 2em 0 1em 0;
+}
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(34,34,34,0.25);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2em 1.5em 1.5em 1.5em;
+  box-shadow: 0 4px 24px rgba(201,161,74,0.15);
+  max-width: 340px;
+  width: 90vw;
+  position: relative;
+}
+.close {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  font-size: 1.5em;
+  color: #C9A14A;
+  cursor: pointer;
+}
+label {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  color: #C9A14A;
+  font-weight: 500;
+}
+input[type="text"], input[type="tel"] {
+  width: 100%;
+  padding: 0.7em;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1em;
+  margin-bottom: 0.2em;
+  background: #faf9f7;
+}
+input:focus {
+  outline: 2px solid #C9A14A;
+}
+.success-message {
+  color: #25D366;
+  font-weight: 600;
+  margin-top: 1em;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem 0.2rem 0 0.2rem;
+  }
+  .modal-content {
+    padding: 1.2em 0.5em 1em 0.5em;
+  }
+} 

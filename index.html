@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff8f0" />
+  <title>SOS Funerarias Chile</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="icon-192.png" type="image/png" />
+  <meta name="description" content="Asistencia funeraria de emergencia en Chile. Guía y contacto rápido 24/7." />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="icon-main"> <!-- Paloma SVG -->
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M8 32C12 28 20 28 24 36C28 28 36 28 40 32" stroke="#C9A14A" stroke-width="2" fill="none"/><path d="M24 36C24 24 36 20 40 8" stroke="#C9A14A" stroke-width="2" fill="none"/><circle cx="24" cy="40" r="2" fill="#C9A14A"/></svg>
+      </div>
+      <h1>SOS Funerarias Chile</h1>
+      <p class="subtitle">Asistencia inmediata y guía en momentos difíciles</p>
+    </header>
+    <main>
+      <button id="emergencyBtn" class="btn btn-gold">&#9888; Emergencia</button>
+      <button id="whatsappBtn" class="btn btn-whatsapp">
+        <svg width="20" height="20" viewBox="0 0 32 32"><path fill="#fff" d="M16 3C9.373 3 4 8.373 4 15c0 2.637.86 5.08 2.34 7.09L4 29l7.18-2.31A11.93 11.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3z"/><path fill="#25D366" d="M16 5c5.523 0 10 4.477 10 10s-4.477 10-10 10c-1.77 0-3.44-.46-4.89-1.32l-.35-.21-4.27 1.37 1.4-4.13-.22-.36A9.94 9.94 0 0 1 6 15c0-5.523 4.477-10 10-10zm-2.13 5.47c-.23-.51-.47-.52-.68-.53-.18-.01-.39-.01-.6-.01s-.55.08-.84.39c-.29.31-1.1 1.08-1.1 2.63 0 1.54 1.13 3.03 1.29 3.24.16.21 2.21 3.37 5.44 4.59.76.33 1.36.53 1.83.68.77.25 1.47.21 2.02.13.62-.09 1.91-.78 2.18-1.54.27-.76.27-1.41.19-1.54-.08-.13-.29-.21-.6-.37-.31-.16-1.91-.94-2.2-1.05-.29-.11-.5-.16-.71.16-.21.32-.82 1.05-1.01 1.27-.19.22-.37.24-.68.08-.31-.16-1.31-.48-2.5-1.53-.92-.78-1.54-1.74-1.72-2.05-.18-.31-.02-.48.14-.64.14-.14.31-.37.47-.56.16-.19.21-.32.31-.53.1-.21.05-.39-.02-.54z"/></svg>
+        WhatsApp 24/7
+      </button>
+      <section class="guide">
+        <h2>4 pasos esenciales ante un fallecimiento</h2>
+        <ol>
+          <li><span class="icon-step">&#10013;</span> Mantén la calma y reúne documentos de identidad.</li>
+          <li><span class="icon-step">&#128222;</span> Contacta a un asesor funerario (usa los botones arriba).</li>
+          <li><span class="icon-step">&#128203;</span> Informa a la autoridad correspondiente (Carabineros o médico).</li>
+          <li><span class="icon-step">&#128172;</span> Sigue las indicaciones del equipo de emergencia funeraria.</li>
+        </ol>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 SOS Funerarias Chile</p>
+    </footer>
+  </div>
+
+  <!-- Modal de Emergencia -->
+  <div id="emergencyModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Solicitud de Emergencia</h2>
+      <form id="emergencyForm">
+        <label for="nombre">Nombre del solicitante</label>
+        <input type="text" id="nombre" name="nombre" required />
+        <label for="whatsapp">Número de WhatsApp</label>
+        <input type="tel" id="whatsapp" name="whatsapp" required pattern="[0-9\+\s]+" placeholder="+56 9 ..." />
+        <label for="comuna">Comuna</label>
+        <input type="text" id="comuna" name="comuna" required />
+        <label for="region">Región</label>
+        <input type="text" id="region" name="region" required />
+        <button type="submit" class="btn btn-gold">Enviar solicitud</button>
+      </form>
+      <div id="formSuccess" class="success-message"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+  </script>
+</body>
+</html> 

@@ -1,0 +1,21 @@
+{
+  "name": "SOS Funerarias Chile",
+  "short_name": "SOS Funerarias",
+  "description": "Asistencia funeraria de emergencia en Chile. Guía y contacto rápido 24/7.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff8f0",
+  "theme_color": "#C9A14A",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 
